@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace TrackerUI
 {
-    public partial class TournamentViewerForm : Form
+    public partial class tournamentViewerForm : Form
     {
-        public TournamentViewerForm()
+        public tournamentViewerForm()
         {
             InitializeComponent();
         }
@@ -19,9 +19,27 @@ namespace TrackerUI
 
         private void Translate()
         {
-            Text = Localization.Resource.TournamentViewerTitle;
-            headerLabel.Text = Localization.Resource.TournamentViewerHeaderLabel;
-            tournamentName.Text = Localization.Resource.None;
+            Text = Localization.Resources.TournamentViewerTitle;
+            headerLabel.Text = Localization.Resources.TournamentViewerHeaderLabel;
+            tournamentNameLabel.Text = Localization.Resources.None;
+            translateToFrenchButton.Text = Localization.Resources.French;
+            translateToEnglishButton.Text = Localization.Resources.English;
+            translateToJapaneseButton.Text = Localization.Resources.Japanese;
+        }
+
+        private void TranslateToFrenchButton_Click(object sender, EventArgs e)
+        {
+            TranslateTo("fr");
+        }
+
+        private void TranslateToEnglishButton_Click(object sender, EventArgs e)
+        {
+            TranslateTo("en");
+        }
+
+        private void TranslateToJapaneseButton_Click(object sender, EventArgs e)
+        {
+            TranslateTo("ja");
         }
 
         private void TranslateTo(string cultureName)
@@ -37,16 +55,12 @@ namespace TrackerUI
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
 
             Translate();
+            SetControlsLayout();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void SetControlsLayout()
         {
-            TranslateTo("fr-FR");
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            TranslateTo("en-US");
+            tournamentNameLabel.Left = headerLabel.Width + 20;
         }
     }
 }

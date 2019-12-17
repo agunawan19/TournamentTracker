@@ -1,6 +1,6 @@
 ﻿namespace TrackerUI
 {
-    partial class TournamentViewerForm
+    partial class tournamentViewerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.headerLabel = new System.Windows.Forms.Label();
-            this.tournamentName = new System.Windows.Forms.Label();
+            this.tournamentNameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.translateToFrenchButton = new System.Windows.Forms.Button();
+            this.translateToEnglishButton = new System.Windows.Forms.Button();
+            this.translateToJapaneseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -46,16 +47,16 @@
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Tournament:";
             // 
-            // tournamentName
+            // tournamentNameLabel
             // 
-            this.tournamentName.AutoSize = true;
-            this.tournamentName.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tournamentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.tournamentName.Location = new System.Drawing.Point(232, 9);
-            this.tournamentName.Name = "tournamentName";
-            this.tournamentName.Size = new System.Drawing.Size(94, 50);
-            this.tournamentName.TabIndex = 1;
-            this.tournamentName.Text = "<...>";
+            this.tournamentNameLabel.AutoSize = true;
+            this.tournamentNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tournamentNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.tournamentNameLabel.Location = new System.Drawing.Point(232, 9);
+            this.tournamentNameLabel.Name = "tournamentNameLabel";
+            this.tournamentNameLabel.Size = new System.Drawing.Size(94, 50);
+            this.tournamentNameLabel.TabIndex = 1;
+            this.tournamentNameLabel.Text = "<...>";
             // 
             // label1
             // 
@@ -67,37 +68,48 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
-            // button1
+            // translateToFrenchButton
             // 
-            this.button1.Location = new System.Drawing.Point(729, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 47);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.translateToFrenchButton.Location = new System.Drawing.Point(719, 285);
+            this.translateToFrenchButton.Name = "translateToFrenchButton";
+            this.translateToFrenchButton.Size = new System.Drawing.Size(69, 47);
+            this.translateToFrenchButton.TabIndex = 3;
+            this.translateToFrenchButton.Text = "French";
+            this.translateToFrenchButton.UseVisualStyleBackColor = true;
+            this.translateToFrenchButton.Click += new System.EventHandler(this.TranslateToFrenchButton_Click);
             // 
-            // button2
+            // translateToEnglishButton
             // 
-            this.button2.Location = new System.Drawing.Point(729, 391);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 47);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.translateToEnglishButton.Location = new System.Drawing.Point(719, 338);
+            this.translateToEnglishButton.Name = "translateToEnglishButton";
+            this.translateToEnglishButton.Size = new System.Drawing.Size(69, 47);
+            this.translateToEnglishButton.TabIndex = 4;
+            this.translateToEnglishButton.Text = "English";
+            this.translateToEnglishButton.UseVisualStyleBackColor = true;
+            this.translateToEnglishButton.Click += new System.EventHandler(this.TranslateToEnglishButton_Click);
             // 
-            // TournamentViewerForm
+            // translateToJapaneseButton
+            // 
+            this.translateToJapaneseButton.Location = new System.Drawing.Point(719, 391);
+            this.translateToJapaneseButton.Name = "translateToJapaneseButton";
+            this.translateToJapaneseButton.Size = new System.Drawing.Size(69, 47);
+            this.translateToJapaneseButton.TabIndex = 5;
+            this.translateToJapaneseButton.Text = "Japanese";
+            this.translateToJapaneseButton.UseVisualStyleBackColor = true;
+            this.translateToJapaneseButton.Click += new System.EventHandler(this.TranslateToJapaneseButton_Click);
+            // 
+            // tournamentViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.translateToJapaneseButton);
+            this.Controls.Add(this.translateToEnglishButton);
+            this.Controls.Add(this.translateToFrenchButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tournamentName);
+            this.Controls.Add(this.tournamentNameLabel);
             this.Controls.Add(this.headerLabel);
-            this.Name = "TournamentViewerForm";
+            this.Name = "tournamentViewerForm";
             this.Text = "Tournament Viewer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -108,10 +120,11 @@
         #endregion
 
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.Label tournamentName;
+        private System.Windows.Forms.Label tournamentNameLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button translateToFrenchButton;
+        private System.Windows.Forms.Button translateToEnglishButton;
+        private System.Windows.Forms.Button translateToJapaneseButton;
     }
 }
 

@@ -16,13 +16,17 @@ namespace TrackerUI
         [STAThread]
         static void Main()
         {
+            SetDefaultCultureInfo();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new tournamentViewerForm());
+        }
+
+        private static void SetDefaultCultureInfo()
+        {
             CultureInfo cultureInfo = CultureInfo.CreateSpecificCulture("en-US");
             Thread.CurrentThread.CurrentCulture = cultureInfo;
             Thread.CurrentThread.CurrentUICulture = cultureInfo;
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TournamentViewerForm());
         }
     }
 }

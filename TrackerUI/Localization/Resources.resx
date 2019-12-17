@@ -126,4 +126,13 @@
   <data name="TournamentViewerTitle" xml:space="preserve">
     <value>Tournament Viewer</value>
   </data>
+  <data name="French" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="Japanese" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
 </root>
