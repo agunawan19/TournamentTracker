@@ -60,7 +60,8 @@ namespace TrackerUI
 
         private void SetControlsLayout()
         {
-            tournamentNameLabel.Left = headerLabel.Width + 20;
+            const int marginX = 6;
+            tournamentNameLabel.Left = headerLabel.Left + headerLabel.Width + marginX;
         }
     }
 }
