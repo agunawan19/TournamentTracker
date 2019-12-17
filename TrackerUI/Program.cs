@@ -19,7 +19,7 @@ namespace TrackerUI
             SetDefaultCultureInfo();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new tournamentViewerForm());
+            Application.Run(new TournamentViewerForm());
         }
 
         private static void SetDefaultCultureInfo()

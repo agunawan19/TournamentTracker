@@ -1,6 +1,6 @@
 ﻿namespace TrackerUI
 {
-    partial class tournamentViewerForm
+    partial class TournamentViewerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -98,7 +98,7 @@
             this.translateToJapaneseButton.UseVisualStyleBackColor = true;
             this.translateToJapaneseButton.Click += new System.EventHandler(this.TranslateToJapaneseButton_Click);
             // 
-            // tournamentViewerForm
+            // TournamentViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,9 +109,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tournamentNameLabel);
             this.Controls.Add(this.headerLabel);
-            this.Name = "tournamentViewerForm";
+            this.Name = "TournamentViewerForm";
             this.Text = "Tournament Viewer";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.TournamentViewerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

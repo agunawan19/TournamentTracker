@@ -5,14 +5,14 @@ using System.Windows.Forms;
 
 namespace TrackerUI
 {
-    public partial class tournamentViewerForm : Form
+    public partial class TournamentViewerForm : Form
     {
-        public tournamentViewerForm()
+        public TournamentViewerForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void TournamentViewerForm_Load(object sender, EventArgs e)
         {
             Translate();
         }
